@@ -15,6 +15,6 @@ export class Employee {
   }
 
   toString() {
-    return `${this._name} (${this._type})`;
+    return `${this._name} (${this.type})`;
   }
 }
