@@ -11,6 +11,7 @@ export const createEmployee = (name, type) => {
       return new Salesman(name);
     case 'manager':
       return new Manager(name);
+    default:
+      throw new Error(`Employee cannot be of type ${type}`);
   }
-  return new Employee(name, type);
 };

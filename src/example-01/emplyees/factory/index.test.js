@@ -22,4 +22,8 @@ describe('createEmployee', () => {
     expect(employee.type).toBe('manager');
     expect(employee instanceof Manager).toBe(true);
   });
+
+  it('should throw an error for an unknown type', () => {
+    expect(() => createEmployee('Kaio', 'invalid')).toThrow('Employee cannot be of type invalid');
+  });
 });
