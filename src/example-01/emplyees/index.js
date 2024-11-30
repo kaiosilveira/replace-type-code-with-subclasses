@@ -1,5 +1,5 @@
 export class Employee {
-  constructor(name, type) {
+  constructor(name) {
     this._name = name;
   }
 

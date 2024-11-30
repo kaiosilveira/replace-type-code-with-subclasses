@@ -2,7 +2,7 @@ import { Employee } from '..';
 
 export class Salesman extends Employee {
   constructor(name) {
-    super(name, `salesman`);
+    super(name);
   }
 
   get type() {
