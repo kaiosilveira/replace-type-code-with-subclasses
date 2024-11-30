@@ -1,6 +1,7 @@
 import { createEmployee } from '.';
 import { Engineer } from '../engineer';
 import { Salesman } from '../salesman';
+import { Manager } from '../manager';
 
 describe('createEmployee', () => {
   it('should create an engineer', () => {
@@ -14,5 +15,11 @@ describe('createEmployee', () => {
     const employee = createEmployee('Kaio', 'salesman');
     expect(employee.type).toBe('salesman');
     expect(employee instanceof Salesman).toBe(true);
+  });
+
+  it('should create a manager', () => {
+    const employee = createEmployee('Kaio', 'manager');
+    expect(employee.type).toBe('manager');
+    expect(employee instanceof Manager).toBe(true);
   });
 });
