@@ -5,4 +5,9 @@ describe('EmployeeType', () => {
     const employeeType = new EmployeeType('engineer');
     expect(employeeType.toString()).toBe('engineer');
   });
+
+  it('should return the capitalized name', () => {
+    const employeeType = new EmployeeType('manager');
+    expect(employeeType.capitalizedName).toBe('Manager');
+  });
 });
