@@ -13,8 +13,12 @@ export class Employee {
     this._type = arg;
   }
 
+  get typeString() {
+    return this._type.toString();
+  }
+
   get capitalizedType() {
-    return this._type.charAt(0).toUpperCase() + this._type.substr(1).toLowerCase();
+    return this.typeString.charAt(0).toUpperCase() + this.typeString.substr(1).toLowerCase();
   }
 
   validateType(arg) {
