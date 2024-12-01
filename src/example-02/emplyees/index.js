@@ -1,6 +1,6 @@
 export class Employee {
   constructor(name, type) {
-    this.validateType(type);
+    this.validateType(type.toString());
     this._name = name;
     this._type = type;
   }

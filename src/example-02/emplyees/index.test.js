@@ -1,4 +1,5 @@
 import { Employee } from '.';
+import { EmployeeType } from './types';
 
 describe('Employee', () => {
   it('should throw an error if type is not valid', () => {
@@ -6,13 +7,13 @@ describe('Employee', () => {
   });
 
   it('should return the capitalized type', () => {
-    const employee = new Employee('Kaio', 'engineer');
+    const employee = new Employee('Kaio', new EmployeeType('engineer'));
     expect(employee.capitalizedType).toBe('Engineer');
   });
 
   describe('toString', () => {
     it('should return the name and type', () => {
-      const employee = new Employee('Kaio', 'engineer');
+      const employee = new Employee('Kaio', new EmployeeType('engineer'));
       expect(employee.toString()).toBe('Kaio (Engineer)');
     });
   });
