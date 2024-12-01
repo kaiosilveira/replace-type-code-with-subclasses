@@ -1,6 +1,7 @@
 import { createEmployeeType } from '.';
 import { Engineer } from '../engineer';
 import { Manager } from '../manager';
+import { Salesman } from '../salesman';
 
 describe('createEmployeeType', () => {
   it('should throw an error if type is not valid', () => {
@@ -20,5 +21,10 @@ describe('createEmployeeType', () => {
   it('should return a Manager type', () => {
     const employeeType = createEmployeeType('manager');
     expect(employeeType instanceof Manager).toBe(true);
+  });
+
+  it('should return a Salesman type', () => {
+    const employeeType = createEmployeeType('sales');
+    expect(employeeType instanceof Salesman).toBe(true);
   });
 });

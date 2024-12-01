@@ -1,6 +1,7 @@
 import { EmployeeType } from '..';
 import { Engineer } from '../engineer';
 import { Manager } from '../manager';
+import { Salesman } from '../salesman';
 
 export function createEmployeeType(value) {
   if (!['engineer', 'manager', 'sales'].includes(value)) {
@@ -12,6 +13,8 @@ export function createEmployeeType(value) {
       return new Engineer();
     case 'manager':
       return new Manager();
+    case 'sales':
+      return new Salesman();
   }
 
   return new EmployeeType(value);
