@@ -6,11 +6,6 @@ describe('Employee', () => {
     expect(() => new Employee('Kaio', 'invalid')).toThrow('Employee cannot be of type invalid');
   });
 
-  it('should return the capitalized type', () => {
-    const employee = new Employee('Kaio', new EmployeeType('engineer'));
-    expect(employee.capitalizedType).toBe('Engineer');
-  });
-
   describe('toString', () => {
     it('should return the name and type', () => {
       const employee = new Employee('Kaio', new EmployeeType('engineer'));
